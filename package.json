@@ -1,0 +1,50 @@
+{
+  "name": "react-skeleton-image",
+  "version": "0.0.1",
+  "description": "A skeleton image component which handles the image's loading and error state.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "react-image",
+    "skeleton"
+  ],
+  "author": "Naing Linn Khant",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nainglinnkhant/react-skeleton-image.git"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.7",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  }
+}
