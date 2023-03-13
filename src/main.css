@@ -1,0 +1,43 @@
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.skeleton {
+  background: hsl(200, 15%, 70%);
+  animation: skeleton-loading 0.7s linear infinite alternate;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #F8F9FA;
+  cursor: pointer;
+}
+
+@keyframes skeleton-loading {
+  0% {
+      opacity: 0.5;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
