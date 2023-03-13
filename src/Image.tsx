@@ -31,7 +31,7 @@ const Image = (props: ImageProps) => {
   if (error)
     return (
       <div
-        className='flex justify-center items-center w-full h-full bg-fallback cursor-pointer'
+        className='fallback'
         onClick={onClick}
         style={{ width, height }}
       >
@@ -47,7 +47,7 @@ const Image = (props: ImageProps) => {
         alt={imageProps.alt}
         onLoad={() => setImageLoaded(true)}
         onError={() => setError(true)}
-        className={`w-full h-full object-cover object-center ${
+        className={`image ${
           skeleton ? imageClass : ''
         } ${className}`}
         style={{ width, height, ...style }}
@@ -55,7 +55,7 @@ const Image = (props: ImageProps) => {
 
       {skeleton && !imageLoaded && !error && (
         <div
-          className={`bg-skeleton w-full h-full rounded-inherit cursor-pointer animate-skeleton ${skeletonClassName}`}
+          className={`skeleton ${skeletonClassName}`}
           onClick={onClick}
           style={{ width, height }}
         />
