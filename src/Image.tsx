@@ -30,11 +30,7 @@ const Image = (props: ImageProps) => {
 
   if (error)
     return (
-      <div
-        className='fallback'
-        onClick={onClick}
-        style={{ width, height }}
-      >
+      <div className='fallback' onClick={onClick} style={{ width, height }}>
         <FallbackIcon />
       </div>
     )
@@ -47,9 +43,7 @@ const Image = (props: ImageProps) => {
         alt={imageProps.alt}
         onLoad={() => setImageLoaded(true)}
         onError={() => setError(true)}
-        className={`image ${
-          skeleton ? imageClass : ''
-        } ${className}`}
+        className={`image ${skeleton ? imageClass : ''} ${className}`}
         style={{ width, height, ...style }}
       />
 

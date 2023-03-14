@@ -28,16 +28,16 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background: #F8F9FA;
+  background: #f8f9fa;
   cursor: pointer;
 }
 
 @keyframes skeleton-loading {
   0% {
-      opacity: 0.5;
+    opacity: 0.5;
   }
 
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
