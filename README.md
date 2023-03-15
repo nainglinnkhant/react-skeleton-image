@@ -1,14 +1,10 @@
 # React Skeleton Image
 
-A skeleton image component which handles an image's loading and error state.
+A skeleton image component which handles an image's loading and error states.
 
-> This is a simple React image component which abstracts away all the dirty work you have to do to handle loading and error state of images.
-
-<br/>
+> This is a simple React image component which abstracts away all the dirty work you have to do to handle loading and error states of images.
 
 ## Installation
-
-<br/>
 
 ```bash
 npm i react-skeleton-image
@@ -26,11 +22,7 @@ or
 pnpm add react-skeleton-image
 ```
 
-<br/>
-
 ## Usage
-
-<br/>
 
 After installing the package, import `Image` component:
 
@@ -44,8 +36,6 @@ Import the CSS file (This step will not be needed in the next release):
 import 'react-skeleton-image/dist/index.css'
 ```
 
-<br/>
-
 You need to specify both `width` and `height` for the proper image sizing.
 
 ```jsx
@@ -55,8 +45,6 @@ You need to specify both `width` and `height` for the proper image sizing.
   height={200}
 />
 ```
-
-<br/>
 
 You can also specify the width and height in a container and wrap the Image component with it.
 
@@ -70,8 +58,6 @@ You can also specify the width and height in a container and wrap the Image comp
 </div>
 ```
 
-<br/>
-
 It is recommended to set css properties like `margin` and `padding` in the container instead of the Image component. 
 
 ```jsx
@@ -84,11 +70,7 @@ It is recommended to set css properties like `margin` and `padding` in the conta
 </div>
 ```
 
-<br/>
-
 ## Props
-
-<br/>
 
 | Name                | Type            | Description                                          |
 | ------------------- | --------------- | ---------------------------------------------------- |
