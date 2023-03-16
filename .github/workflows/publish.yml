@@ -21,13 +21,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          cache: "pnpm"
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build
-        run: pnpm build
+        run: pnpm lint && pnpm build
 
       - name: Publish
         run: pnpm publish --no-git-checks
