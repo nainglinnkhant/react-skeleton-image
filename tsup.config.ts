@@ -1,6 +1,6 @@
-import { Options } from 'tsup'
+import { defineConfig } from 'tsup'
 
-export const tsup: Options = {
+export default defineConfig({
   target: 'esnext',
   clean: true,
   dts: true,
@@ -8,5 +8,5 @@ export const tsup: Options = {
   keepNames: true,
   minify: true,
   sourcemap: true,
-  format: ['cjs'],
-}
+  format: ['cjs', 'esm'],
+})
