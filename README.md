@@ -58,7 +58,7 @@ You can also specify the width and height in a container and wrap the Image comp
 </div>
 ```
 
-It is recommended to set css properties like `margin` and `padding` in the container instead of the Image component. 
+It is recommended to set css properties like `margin`, `padding` and `border-radius` in the container instead of the `Image` component. 
 
 ```jsx
 <div style={{ width: 300, height: 200, margin: 30 }}>
