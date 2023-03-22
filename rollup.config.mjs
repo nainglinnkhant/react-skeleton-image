@@ -2,7 +2,7 @@ import typescript from '@rollup/plugin-typescript'
 import postcss from 'rollup-plugin-postcss'
 import commonjs from '@rollup/plugin-commonjs'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
-import { uglify } from 'rollup-plugin-uglify'
+import terser from '@rollup/plugin-terser'
 
 export default {
   input: 'src/index.tsx',
@@ -22,12 +22,10 @@ export default {
     typescript({
       tsconfig: './tsconfig.json',
     }),
-    postcss({
-      modules: true,
-    }),
+    postcss(),
     nodeResolve(),
     commonjs(),
-    uglify(),
+    terser(),
   ],
   external: ['react', 'react-dom'],
 }
