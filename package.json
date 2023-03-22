@@ -1,6 +1,6 @@
 {
   "name": "react-skeleton-image",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A skeleton image component which handles an image's loading and error states.",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
