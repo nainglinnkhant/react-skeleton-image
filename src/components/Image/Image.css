@@ -6,6 +6,10 @@
   display: none;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .image {
   width: 100%;
   height: 100%;

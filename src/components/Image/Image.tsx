@@ -8,6 +8,7 @@ interface ImageProps extends React.HTMLProps<HTMLImageElement> {
   height?: number
   skeleton?: boolean
   skeletonClassName?: string
+  inline?: boolean
 }
 
 const Image = (props: ImageProps) => {
@@ -24,10 +25,11 @@ const Image = (props: ImageProps) => {
     height = '',
     style = {},
     onClick,
+    inline,
     ...imageProps
   } = props
 
-  const imageClass = imageLoaded ? 'block' : 'hidden'
+  const imageClass = imageLoaded ? (inline ? 'inline-block' : 'block') : 'hidden'
 
   if (error)
     return (
