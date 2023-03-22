@@ -1,4 +1,3 @@
-import Image from './Image'
-import './index.module.css'
+import Image from './components/Image/Image'
 
 export { Image }

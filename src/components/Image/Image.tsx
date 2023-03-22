@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 
-import FallbackIcon from './FallbackIcon'
+import FallbackIcon from '../FallbackIcon/FallbackIcon'
+import './Image.css'
 
 interface ImageProps extends React.HTMLProps<HTMLImageElement> {
   width?: number
