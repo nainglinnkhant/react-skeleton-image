@@ -52,8 +52,6 @@ You can also specify the width and height in a container and wrap the Image comp
 <div style={{ width: 300, height: 200 }}>
   <Image
     src='https://rb.gy/fgpqyt'
-    width={300}
-    height={200}
   />
 </div>
 ```
@@ -64,8 +62,6 @@ It is recommended to set css properties like `margin`, `padding` and `border-rad
 <div style={{ width: 300, height: 200, margin: 30 }}>
   <Image
     src='https://rb.gy/fgpqyt'
-    width={300}
-    height={200}
   />
 </div>
 ```
