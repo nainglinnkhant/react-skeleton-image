@@ -21,17 +21,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: "pnpm"
+          cache: 'pnpm'
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Build
-        run: pnpm lint && pnpm build
+        run: pnpm run lint && pnpm run build
 
       - name: Publish
-        run: pnpm publish --no-git-checks
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: changeset publish
 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
