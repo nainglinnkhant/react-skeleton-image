@@ -18,11 +18,28 @@
 }
 
 .skeleton {
-  background: hsl(200, 15%, 70%);
-  animation: skeleton-loading 0.7s linear infinite alternate;
+  background: hsl(201, 15%, 82%);
   width: 100%;
   height: 100%;
   border-radius: inherit;
+}
+
+.skeleton::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+  content: '';
 }
 
 .fallback {
@@ -34,12 +51,8 @@
   background: #f8f9fa;
 }
 
-@keyframes skeleton-loading {
-  0% {
-    opacity: 0.5;
-  }
-
+@keyframes shimmer {
   100% {
-    opacity: 1;
+    transform: translateX(100%);
   }
 }
